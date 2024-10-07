@@ -49,6 +49,8 @@
               extensions = [ "rust-src" "rust-analyzer" "rustfmt" ];
               targets = [ ];
             })
+            python3
+            python3Packages.sympy
           ] ++ bevy-deps ++ tools;
           LD_LIBRARY_PATH = lib.makeLibraryPath (bevy-deps);
         };
