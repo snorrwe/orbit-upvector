@@ -18,6 +18,4 @@ forward = -Matrix([[x, y, z]]).T
 right = forward.cross(Matrix([[0, 1, 0]]).T)
 up = forward.cross(right)
 print(forward)
-print(right)
-print(up)
-pprint(up)
+pprint(-up)

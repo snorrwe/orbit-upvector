@@ -63,19 +63,20 @@ fn draw_example_collection(
         radius * ctheta,
     );
 
-    let up = -Vec3::new(
-        sphi * stheta.powi(2) * cphi,
-        -stheta.powi(2) * cphi.powi(2) - ctheta.powi(2),
-        sphi * stheta * ctheta,
-    );
+    let up = Vec3::new(
+        -sphi * stheta.powi(2) * cphi,
+        stheta.powi(2) * cphi.powi(2) + ctheta.powi(2),
+        -sphi * stheta * ctheta,
+    )
+    .normalize();
 
     gizmos.line(pos, Vec3::ZERO, YELLOW);
     gizmos.arrow(pos, pos + up, BLUE);
 
-    println!("pog? {:.3} {:.3}", pos.dot(up), up.length());
+    dbg!(pos.dot(up), up.length());
 }
 
 fn rotate_phi(mut p: ResMut<TestParams>, time: Res<Time>) {
-    p.theta = (p.theta + PI / 4.0 * time.delta_seconds());
-    p.phi = (p.phi + PI / 8.0 * time.delta_seconds());
+    p.theta = p.theta + PI / 4.0 * time.delta_seconds();
+    p.phi = p.phi + PI / 8.0 * time.delta_seconds();
 }
