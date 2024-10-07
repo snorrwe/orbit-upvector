@@ -1,4 +1,4 @@
-use std::f32::consts::{PI, TAU};
+use std::f32::consts::PI;
 
 use bevy::{color::palettes::css::*, prelude::*};
 
@@ -52,7 +52,9 @@ fn draw_example_collection(
     params: Res<TestParams>,
 ) {
     let TestParams { phi, theta, radius } = *params;
-    my_gizmos.sphere(Vec3::ZERO, Quat::IDENTITY, radius, RED);
+    my_gizmos
+        .sphere(Vec3::ZERO, Quat::IDENTITY, radius, RED)
+        .resolution(64);
 
     let (sphi, cphi) = phi.sin_cos();
     let (stheta, ctheta) = theta.sin_cos();
