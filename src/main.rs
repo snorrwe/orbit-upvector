@@ -8,7 +8,7 @@ fn main() {
         .init_gizmo_group::<MyRoundGizmos>()
         .insert_resource(TestParams::default())
         .add_systems(Startup, setup)
-        .add_systems(Update, (draw_example_collection, rotate_phi))
+        .add_systems(Update, (draw_example_collection, rotate_phi, rotate_camera))
         .run();
 }
 
