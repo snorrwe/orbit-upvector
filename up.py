@@ -17,12 +17,15 @@ forward = -Matrix([[x, y, z]]).T
 position = forward * -r
 
 
-right = forward.cross(Matrix([[0, 1, 0]]).T)
+Y = Matrix([[0, 1, 0]]).T
+right = forward.cross(Y)
 up = -forward.cross(right)
-print("cartesian position")
+print("Cartesian position")
 pprint(position)
 print("Up vector")
 pprint(up)
 print("LaTeX")
+print("pos")
 print(latex(position))
+print("up")
 print(latex(up))
