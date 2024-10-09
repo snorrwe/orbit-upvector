@@ -74,8 +74,6 @@ fn draw_example_collection(
 
     gizmos.line(pos, Vec3::ZERO, YELLOW);
     gizmos.arrow(pos, pos + up, BLUE);
-
-    dbg!(pos.dot(up), up.length());
 }
 
 fn rotate_phi(mut p: ResMut<TestParams>, time: Res<Time>) {
