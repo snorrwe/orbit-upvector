@@ -12,3 +12,5 @@ $`{Y}=\left[\begin{matrix}0 & 1 & 0\end{matrix}\right]`$.
 $`{up}=\left[\begin{matrix}- \sin{\left(\phi \right)} \sin^{2}{\left(\theta \right)} \cos{\left(\phi \right)}\\\sin^{2}{\left(\theta \right)} \cos^{2}{\left(\phi \right)} + \cos^{2}{\left(\theta \right)}\\- \sin{\left(\phi \right)} \sin{\left(\theta \right)} \cos{\left(\theta \right)}\end{matrix}\right]`$
 
 Do note that the _up_ vector is **not normalized**!
+
+![Demo showing position and up vector](./doc/demo.gif)
