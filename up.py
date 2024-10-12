@@ -18,8 +18,8 @@ position = forward * -r
 
 
 Y = Matrix([[0, 1, 0]]).T
-right = forward.cross(Y)
-up = -forward.cross(right)
+right = Y.cross(forward)
+up = forward.cross(right)
 print("Cartesian position")
 pprint(position)
 print("Up vector")
