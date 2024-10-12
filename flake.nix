@@ -24,17 +24,13 @@
           libxkbcommon
           libGL
           wayland # To use the wayland feature
-          libz
-          openssl
+          # libz
           vulkan-loader
           vulkan-extension-layer
-          vulkan-validation-layers # don't need them *strictly* but immensely helpful
         ];
         tools = with pkgs; [
           pkg-config
-          cargo-edit
           just
-          parallel
         ];
       in
       with pkgs;
